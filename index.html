@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Michael Jaseb</title>
+  <style>
+    body {
+      background-color: #2c003e;
+      color: white;
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+    header, footer {
+      background-color: #3b0066;
+      text-align: center;
+      padding: 20px;
+    }
+    nav {
+      background-color: #4b0082;
+      text-align: center;
+      padding: 10px 0;
+    }
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      cursor: pointer;
+    }
+    section {
+      display: none;
+      padding: 20px;
+    }
+    section.active {
+      display: block;
+    }
+    .paket {
+      background-color: #4b0082;
+      padding: 15px;
+      margin-bottom: 15px;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Michael Jaseb</h1>
+  </header>
+
+  <nav>
+    <a onclick="showSection('pricelist')">Pricelist</a>
+    <a onclick="showSection('owner')">Owner</a>
+    <a onclick="showSection('format')">Format</a>
+  </nav>
+
+  <section id="pricelist">
+    <h2>Pricelist</h2>
+    <div class="paket"><h3>Paket 1, 2, 3x / 1hari</h3><p>Deskripsi untuk paket 1 hari.</p></div>
+    <div class="paket"><h3>Paket 1, 2, 3x / 2hari</h3><p>Deskripsi untuk paket 2 hari.</p></div>
+    <div class="paket"><h3>Paket 1, 2, 3x / 3hari</h3><p>Deskripsi untuk paket 3 hari.</p></div>
+    <div class="paket"><h3>Paket 1, 2, 3x / 4hari</h3><p>Deskripsi untuk paket 4 hari.</p></div>
+    <div class="paket"><h3>Paket 1, 2, 3x / 5hari</h3><p>Deskripsi untuk paket 5 hari.</p></div>
+  </section>
+
+  <section id="owner">
+    <h2>Owner</h2>
+    <p>Informasi tentang pemilik dari Michael Jaseb.</p>
+  </section>
+
+  <section id="format">
+    <h2>Format</h2>
+    <p>Penjelasan tentang format layanan Jaseb.</p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Michael Jaseb. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function showSection(id) {
+      document.querySelectorAll("section").forEach(sec => sec.classList.remove("active"));
+      document.getElementById(id).classList.add("active");
+    }
+  </script>
+</body>
+</html>
